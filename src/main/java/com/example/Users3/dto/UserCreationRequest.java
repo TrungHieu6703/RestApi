@@ -1,13 +1,15 @@
 package com.example.Users3.dto;
 
-import org.hibernate.validator.constraints.NotBlank;
+
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
 
 import java.time.LocalDate;
 
 public class UserCreationRequest {
 
     private String username;
-
+    @Size(min = 8, message = "mat khau dai hon 8 ky tu")
     private String password;
     private String firstName;
     private String lastName;
